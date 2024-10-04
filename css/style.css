@@ -1,1 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ #wrapper {
+    line-height: 100%;
+    margin: auto;
+ }
+
+body{
+    background-color: black;
+    color: gold;
+}
+nav{
+    background-color: black;
+    width: 100%;
+    float: right;
+    padding: 30px;
+    position: sticky;
+    text-decoration: none;
+    
+
+}
+nav a{ 
+    text-decoration: none;
+    letter-spacing: 5px;
+    padding: 25px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+
+    
+
+ }
+ a{
+    color: gold;
+ }
+
+.cover{
+   background-image: url(../images/cover.jpeg);
+    width: 100%;
+    height: 100VH;
+    text-align: center;
+    background-size: cover;
+
+
+
+}
+ 
+ .cover h1{
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(242, 208, 17);
+    padding-top: 250px;
+    font-weight: 100%;
+    line-height: 1.5;
+  text-align: center;
+
+    letter-spacing: 5px;
+    font-size: 150px;
+ }
+ .mainpg{ position: relative;
+    width: 100%;
+    height: 100VH;
+    text-align: center;
+    background-size: cover;
+    margin-top: 15%;
+
+ }
+.mright{ color: rgb(164, 164, 75);
+    float: right;
+    margin-right: 10%;
+}
+.mright img{
+    margin-right: 30%;
+    position: absolute;
+    right:-320px}
+    
+.mright h2{
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: 30%;
+}
+.mright ul{
+    color: black;
+    position: relative;
+    margin-top: 20%;
+    font-size: 30px;
+    text-align:left;
+    
+ 
+    padding: 2px;
+}
+.mright li{
+    color: black;
+margin-top: 20%;
+margin-bottom: 10%;
+font-size: 20px;
+margin-left: 10%;
+}
+.mright h2{
+    margin-bottom: 10%;
+    font-size: 30px;
+
+
+}
+.mright a{
+    color: black;
+}
+.mleft{ float:left;
+    width: 60%;
+
+}
+.mleft h2{
+    margin-right:20%;
+    font-size: 50px;
+    margin-bottom: 2%;
+}
+.mleft img{
+    width: 50%;
+position: absolute;
+left:-20px}
+
+
+
+.mleft table{
+    margin-top: 12%;
+    margin-left: 10%;
+    position:absolute;
+    border-style: groove;
+      
+
+
+}
+.mleft td{
+
+    border-style: groove;
+   border-color: gold;
+   
+
+}
+.about {margin-top: 10%;
+    text-align: center;
+    
+
+}
+.about h1{font-size: 80px;
+    margin-bottom: 5%;
+    border-color: gold;
+    border-bottom: 5px;
+   
+}
+.about img{
+    width:20%;
+    padding: 10px;
+}
+
+.about p{
+    color: gold;
+    margin-left:10%;
+     margin-top: 5%;
+    font-size: 20px;
+    width:80%;
+}
+
 

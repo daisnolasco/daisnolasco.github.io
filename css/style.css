@@ -78,7 +78,8 @@ nav a{
     margin-top: 15%;
    
  }
-.mright{ color: rgb(164, 164, 75);
+.mright{ font-family: 'Times New Roman', Times, serif;
+    color: rgb(164, 164, 75);
     float: right;
     margin-right: 10%;
    
@@ -91,7 +92,7 @@ nav a{
     right:-320px;
 height: 100%;}
     
-.mright h2{
+.mright h2{font-size: 40px;
     text-align: center;
     color: black;
     position: relative;
@@ -102,18 +103,17 @@ height: 100%;}
     color: black;
     position: relative;
     margin-top: 30%;
-    font-size: 30px;
+    font-size: 10px;
     text-align:left;
-    font-weight: 200;
-    
- 
     padding: 2px;
 }
 .mright li{
     color: black;
 margin-top: 10%;
+font-weight: bolder;
+
 margin-bottom: 10%;
-font-size: 20px;
+font-size: 15px;
 margin-left: 10%;
 
 }
@@ -123,11 +123,14 @@ margin-left: 10%;
 
 
 }
-.mright a{
+.mright a{font-size: 15px;
     color: black;
 }
 .mleft{ float:left;
     width: 60%;
+    border-right: 5px solid gold;
+    height: 750px;
+   
    
 
 }
@@ -185,6 +188,8 @@ left:-20px;}
     width:80%;
 
 }
+
+
 
 
 

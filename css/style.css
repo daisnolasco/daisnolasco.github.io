@@ -13,7 +13,7 @@ body{
     background-color: black;
     color: gold;
 }
-nav{
+nav{margin-top:30px;
     background-color: black;
     width: 100%;
     float: right;
@@ -72,10 +72,11 @@ nav a{
     float: right;
     margin-right: 10%;
 }
-.mright img{
+.mright img{width:30%;
     margin-right: 30%;
     position: absolute;
-    right:-320px}
+    right:-320px;
+           hieght:100%}
     
 .mright h2{
     text-align: center;

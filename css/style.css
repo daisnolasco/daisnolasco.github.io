@@ -91,11 +91,12 @@ nav a{
     right:-320px;
 height: 100%;}
     
-.mright h2{font-family:Arial, Helvetica, sans-serif;
+.mright h2{
     text-align: center;
     color: black;
     position: relative;
     margin-top: 30%;
+   
 }
 .mright ul{
     color: black;
@@ -103,6 +104,7 @@ height: 100%;}
     margin-top: 30%;
     font-size: 30px;
     text-align:left;
+    font-weight: 200;
     
  
     padding: 2px;
@@ -113,6 +115,7 @@ margin-top: 10%;
 margin-bottom: 10%;
 font-size: 20px;
 margin-left: 10%;
+
 }
 .mright h2{
     margin-bottom: 10%;
@@ -132,6 +135,7 @@ margin-left: 10%;
     margin-right:20%;
     font-size: 50px;
     margin-bottom: 2%;
+    text-shadow: 2px 2px #FF0000;
 }
 .mleft img{
     width: 50%;
@@ -164,7 +168,8 @@ left:-20px;}
 .about h1{font-size: 80px;
     margin-bottom: 5%;
     border-color: gold;
-    border-bottom: 5px;
+    border-bottom: 5px
+    ;text-shadow: 2px 2px #FF0000;
    
 }
 .about img{
@@ -178,7 +183,11 @@ left:-20px;}
      margin-top: 5%;
     font-size: 20px;
     width:80%;
+
 }
+
+
+
 
 
 

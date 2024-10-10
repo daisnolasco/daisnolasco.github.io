@@ -2,190 +2,130 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
+}
 
- #wrapper {
+#wrapper {
     line-height: 100%;
     margin: auto;
- }
-
-body{
-    background-color: rgb(0, 0, 0);
-    color: gold;
 }
-nav{margin-top: 30px;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    float: right;
-    padding: 30px;
-    position: sticky;
-    
-  
 
-}
-nav a{ 
-    text-decoration: none;
-    letter-spacing: 5px;
-    padding: 25px;
-    font-size: 25px;
-    color:gold;
-    font-weight: bold;
-    text-shadow: black;
-    text-shadow: 2px 2px #FF0000;
+body {
+    font-family: "Noto Serif Georgian", serif;
 
-    
-
- }
- a{
-    color: gold;
- }
-
-.cover{
-   background-image: url(../images/cover.jpeg);
-    width: 100%;
     height: 100VH;
-    text-align: center;
-    background-size: cover;
-    color: white;
-
-
-
+    background-color: rgb(255, 255, 255);
 }
- 
- .cover h1{
-    font-family:'Times New Roman', Times, serif;
-    color: gold;
-    padding-top: 250px;
-    font-weight: 100%;
-    line-height: 1.5;
-  text-align: center;
-  text-shadow: 2px 2px #891515;
 
-    letter-spacing: 5px;
-    font-size: 150px;
- }
- .cover a{
-    color:gold;
-    text-shadow: 2px 2px #FF0000;
- }
- 
- .mainpg{ position: relative;
+header {
+    text-align: center;
     width: 100%;
-    height: 100VH;
-    text-align: center;
-    background-size: cover;
-    margin-top: 15%;
+    height: 20%;
    
- }
-.mright{ font-family: 'Times New Roman', Times, serif;
-    color: rgb(164, 164, 75);
-    float: right;
-    margin-right: 10%;
-   
-    
-    
-}
-.mright img{width:30%;
-    margin-right: 25%;
-    position: absolute;
-    right:-320px;
-height: 100%;}
-    
-.mright h2{font-size: 40px;
-    text-align: center;
-    color: black;
-    position: relative;
-    margin-top: 30%;
-   
-}
-.mright ul{
-    color: black;
-    position: relative;
-    margin-top: 30%;
-    font-size: 10px;
-    text-align:left;
-    padding: 2px;
-}
-.mright li{
-    color: black;
-margin-top: 10%;
-font-weight: bolder;
 
-margin-bottom: 10%;
-font-size: 15px;
-margin-left: 10%;
 
 }
-.mright h2{
-    margin-bottom: 10%;
+
+
+h1 a{
+    line-height: 1em;
+    font-size: 90px;
+    font-weight: 900;
+    text-decoration: underline red;
+    color: black;
+
+
+
+}
+h1{
+    margin-bottom: 10px;
+}
+
+.col1 {height:170vh;
+
+    border-top: 20px double black;
+    border-right: 5px double black;
+    ;border-bottom: 5px double black;;
+    width: 15%;
+    float: left;
+    font-family: "Noto Serif Georgian", serif;
+    background-color: #d2d6d6;
+    padding: 1%;
+    
+
+
+
+
+
+}
+
+.col1 h3 {
+    text-decoration: underline red;
+    line-height: 1em;
+    text-align: left;
     font-size: 30px;
-
-
+    margin-bottom: 10px;
+    font-weight: 900;
+    width: 70%;
 }
-.mright a{font-size: 15px;
-    color: black;
-}
-.mleft{ float:left;
-    width: 60%;
-    border-right: 5px solid gold;
-    height: 750px;
-   
-   
 
-}
-.mleft h2{
-    margin-right:20%;
-    font-size: 50px;
+.col1 b {  background-color: #a7a99b;
+    font-size: 17px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);  line-height: 1em;
     margin-bottom: 2%;
-    text-shadow: 2px 2px #FF0000;
-}
-.mleft img{
-    width: 50%;
-position: absolute;
-left:-20px;}
 
-
-
-.mleft table{
-    margin-top: 12%;
-    margin-left: 10%;
-    position:absolute;
-    border-style: groove;
-      
 
 
 }
-.mleft td{
-
-    border-style: groove;
-   border-color: gold;
-   
-
+.col1 p{
+    margin-top: 2%;
 }
-.about {margin-top: 10%;
-    text-align: center;
+main {
+    border-top: 20px double black;
+    display: flex;
     
 
-}
-.about h1{font-size: 80px;
-    margin-bottom: 5%;
-    border-color: gold;
-    border-bottom: 5px
-    ;text-shadow: 2px 2px #FF0000;
-   
-}
-.about img{
-    width:20%;
-    padding: 10px;
-}
 
-.about p{
-    color: gold;
-    margin-left:10%;
-     margin-top: 5%;
-    font-size: 20px;
-    width:80%;
+
+
 
 }
 
+.grid-container {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto ;
+    color: black;
+    margin-left: 2%;
+    margin-right: 2%;
+
+
+}
+
+
+
+.grid1 {
+    margin-top: 0;
+    grid-template-columns: auto ;
+    margin-left: 5%;
+
+
+
+}
+
+iframe{
+    margin-top: 7%;
+    margin-left: 7%;
+    border: 10px double black;
+ 
+
+}
+
+
+.grid1 h2 {font-size: 40px;
+    line-height: 1em;
+    margin-bottom: 10%;  text-decoration: underline red;
+
+
+}
 

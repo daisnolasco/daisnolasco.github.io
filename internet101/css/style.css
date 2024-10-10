@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ #wrapper {
+    line-height: 100%;
+    margin: auto;
+ }
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: gold;
+}
+nav{margin-top: 30px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    float: right;
+    padding: 30px;
+    position: sticky;
+    
+  
+
+}
+nav a{ 
+    text-decoration: none;
+    letter-spacing: 5px;
+    padding: 25px;
+    font-size: 25px;
+    color:gold;
+    font-weight: bold;
+    text-shadow: black;
+    text-shadow: 2px 2px #FF0000;
+
+    
+
+ }
+ a{
+    color: gold;
+ }
+
+.cover{
+   background-image: url(../images/cover.jpeg);
+    width: 100%;
+    height: 100VH;
+    text-align: center;
+    background-size: cover;
+    color: white;
+
+
+
+}
+ 
+ .cover h1{
+    font-family:'Times New Roman', Times, serif;
+    color: gold;
+    padding-top: 250px;
+    font-weight: 100%;
+    line-height: 1.5;
+  text-align: center;
+  text-shadow: 2px 2px #891515;
+
+    letter-spacing: 5px;
+    font-size: 150px;
+ }
+ .cover a{
+    color:gold;
+    text-shadow: 2px 2px #FF0000;
+ }
+ 
+ .mainpg{ position: relative;
+    width: 100%;
+    height: 100VH;
+    text-align: center;
+    background-size: cover;
+    margin-top: 15%;
+   
+ }
+.mright{ font-family: 'Times New Roman', Times, serif;
+    color: rgb(164, 164, 75);
+    float: right;
+    margin-right: 10%;
+   
+    
+    
+}
+.mright img{width:30%;
+    margin-right: 25%;
+    position: absolute;
+    right:-320px;
+height: 100%;}
+    
+.mright h2{font-size: 40px;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: 30%;
+   
+}
+.mright ul{
+    color: black;
+    position: relative;
+    margin-top: 30%;
+    font-size: 10px;
+    text-align:left;
+    padding: 2px;
+}
+.mright li{
+    color: black;
+margin-top: 10%;
+font-weight: bolder;
+
+margin-bottom: 10%;
+font-size: 15px;
+margin-left: 10%;
+
+}
+.mright h2{
+    margin-bottom: 10%;
+    font-size: 30px;
+
+
+}
+.mright a{font-size: 15px;
+    color: black;
+}
+.mleft{ float:left;
+    width: 60%;
+    border-right: 5px solid gold;
+    height: 750px;
+   
+   
+
+}
+.mleft h2{
+    margin-right:20%;
+    font-size: 50px;
+    margin-bottom: 2%;
+    text-shadow: 2px 2px #FF0000;
+}
+.mleft img{
+    width: 50%;
+position: absolute;
+left:-20px;}
+
+
+
+.mleft table{
+    margin-top: 12%;
+    margin-left: 10%;
+    position:absolute;
+    border-style: groove;
+      
+
+
+}
+.mleft td{
+
+    border-style: groove;
+   border-color: gold;
+   
+
+}
+.about {margin-top: 10%;
+    text-align: center;
+    
+
+}
+.about h1{font-size: 80px;
+    margin-bottom: 5%;
+    border-color: gold;
+    border-bottom: 5px
+    ;text-shadow: 2px 2px #FF0000;
+   
+}
+.about img{
+    width:20%;
+    padding: 10px;
+}
+
+.about p{
+    color: gold;
+    margin-left:10%;
+     margin-top: 5%;
+    font-size: 20px;
+    width:80%;
+
+}
+
+

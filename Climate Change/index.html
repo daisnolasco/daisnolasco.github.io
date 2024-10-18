@@ -29,20 +29,25 @@
         <div class='inner-shadow'></div>
       </div>
 
-      <h1><a>Effects Of Climate Change</a></h1>
+      <a href="https://science.nasa.gov/climate-change/"><h1>The Earth's transformation</h1></a>
       <p><b>Earth-orbiting satellites and new technologies have helped scientists see the big picture, collecting many
           different types of information about our planet and its climate all over the world. These data, collected over
           many years, reveal the signs and patterns of a changing climate.</b></p>
-      <button class="button"><a href="https://science.nasa.gov/climate-change/">Learn more</a>
-      
+          <div class="first"><button type="button" onclick="smoothScroll(document.getElementById('second'))">Learn More</button></div>
+<div class="second" id="second"></div>
+
+
     </div>
+
+    
     <div class="ocean">
       
       <h2><b>
-        How does climate change effect as a whole? </b></h2>
+       How Does Climate Change Effect Us? </b></h2>
         <section><b>The rate of change since the mid-20th century is unprecedented over millennia.</b>Earth's climate has changed throughout history. Just in the last 800,000 years, there have been eight cycles of ice ages and warmer periods, with the end of the last ice age about 11,700 years ago marking the beginning of the modern climate era — and of human civilization. Most of these climate changes are attributed to very small variations in Earth’s orbit that change the amount of solar energy our planet receives.</p>
         <iframe width="1000" height="500" src="https://www.youtube.com/embed/YfWCUYX2_U0?si=bEydsAMSs8xGyR_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       </section>
+   
+        </section>
       
   
     </div>
@@ -162,6 +167,30 @@
                   <p><b>Hurricane Laura Floods Southwestern Louisiana</b> Aug. 13, 2020 - Aug. 29, 2020</p>
                 </div>
               </div>
+              <script>
+               window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+                </script>
       <script>
         function initComparisons() {
           var x, i;

@@ -4,7 +4,6 @@
 }
 #wrapper{
     line-height: 100%;
-
     margin: auto;
 }
 body{font-family: 'Courier New', Courier, monospace;
@@ -340,3 +339,4 @@ font-weight: 900;
         opacity: 0.7;
         border-radius: 50%;
       }
+

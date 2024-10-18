@@ -22,25 +22,42 @@ body{font-family: 'Courier New', Courier, monospace;
     height: 350px;
  
 }
-.button2{text-decoration: none;
-    background-color: hwb(0 0% 70%);
-    width: 20%;
+.third {
+    width: 100%;
+    height: 1000px;  ;
+   
+}
+
+.fourth {
+    width: 100%;
+    height: 1000px;}
+
+ 
+#button2{text-decoration: none;
+    background-color: hwb(116 11% 64%);
+    width: 15%;
+    line-height: 1em;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    margin-top: 2%;
+    float: right;
     font-size: 25px;
+    margin-top: 1%;
     font-weight: 900;
     text-transform: uppercase;
-    padding: 30px 30px;
+    padding: 10px 10px;
     border-radius: 50px;
     color: white;
-    margin-right: 50%;
-    margin-left: 1%;
+    margin-right: 15%;
+ 
     text-align: center;
     box-shadow: 0 8px 16px 0 rgba(231, 231, 231, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    
     transition-duration: 0.4s;
     
 }
+#button2:hover{box-shadow:rgb(243, 243, 243) 1px 0 10px;
+    text-shadow: rgb(243, 243, 243) 1px 0 10px;
+}
+
 
 .cover{ background-color: #040615;
 height:70vh;
@@ -200,7 +217,7 @@ border-bottom:double 8px red;
 
 .ocean iframe{
 margin-left: 10%;
-    margin-top: 2%;
+    margin-top: 1%;
     border:solid 15px white;
    
   
@@ -322,4 +339,5 @@ font-weight: 900;
         opacity: 0.7;
         border-radius: 50%;
       }
+       
  

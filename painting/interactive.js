@@ -56,7 +56,7 @@ fill("black")
 
 // bubbles w random color and sizes on click
 function mousePressed(){
-  ellipse(mouseX, mouseY,random(10,90));
+  ellipse(mouseX, mouseY,random(10,100));
   bubbleColor = [a, b,c,d,e,f,g,h,i,j,k,l];
   strokeWeight(random(0,9))
   stroke(random(bubbleColor))

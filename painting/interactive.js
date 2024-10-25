@@ -28,10 +28,7 @@ j=color(31,201,165)
  k=color(210,75,75)
 l=color(95,182,235)
   
-  //text
-   fill("rgb(222,231,222)3)");
-  textSize(20);
-  text('Click The Screen For Bubbles!', 100, 60);
+
 //eye in backround
 
   stroke(147, 232, 230)

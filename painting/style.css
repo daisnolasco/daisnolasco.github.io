@@ -1,10 +1,46 @@
 html, body {
   margin: 0;
   padding: 0;
+  color: white;
+
+  background-color:rgb(5, 5, 5);
+
+}
+h1{margin-top: 2%;
+  font-size: 45px;
+  background-color: rgb(59, 59, 109);
+  color: white;
+}
+
+
+nav{
+  text-align: center;
+}
+nav a{color: white;
+  text-align: center;
+  margin: 2%;
+  padding:1%;
+  font-size: 30px;
+  background-color: rgb(151, 139, 162);
+  text-decoration: none;
+}
+a{
+  font-size: 30px;
+  color: white;
+}
+h4{ 
+  font-size:30px;
+  color: white;
+  margin-left: 5%;
 
 }
 
-canvas {
-  display: block;
-
+img{margin-top: 3%;
+  margin-left: 30%;
+  width: 40%;
+}
+canvas {border:double 3px;
+  margin-left: 23%;
+    display: block;
+  background-color:rgb(28,28,44);
 }

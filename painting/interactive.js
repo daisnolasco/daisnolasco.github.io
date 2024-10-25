@@ -13,7 +13,7 @@ var k;
 var l;
 
 function setup() {
-createCanvas(1000, 1000);
+createCanvas(1000, 600);
   background("rgb(28,28,44)");
 a = color(184,99,184);
 b = color(18,18,169);

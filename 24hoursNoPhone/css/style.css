@@ -1,1 +1,16 @@
+body{ 
+  background-color: black;
+    color: wheat;
+    margin-left: 10%;
 
+ background-image: url(../IMG_5384.png);
+    margin-right: 10%; }
+
+
+ h1{margin-bottom: 6%;
+    font-size: 50px;
+    width: 100%;
+}
+p{margin-top: 5%;
+    font-size: 20px;
+}

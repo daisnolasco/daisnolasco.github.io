@@ -1,62 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing Canvas</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        #canvas { border: 1px solid black; cursor: crosshair; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Drawing Canvas</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+body{ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+    
+    
+    .bg-1 img{
+        width: 100%;
+    }
+    .bg-1 h1{position: absolute;
+        margin-top: 5%;
+        color:wheat ;
+
+    }
+    #drawingCanvas {
+      border: 1px solid #ddd;
+      background-color: #fff;
+      touch-action: none; /* Prevent default touch actions */
+    }
+  </style>
 </head>
 <body>
-    <div class="container mt-5 text-center">
-        <h1>Drawing Canvas</h1>
-        <canvas id="canvas" width="600" height="400"></canvas>
-        <button id="clearBtn" class="btn btn-danger mt-3">Clear Canvas</button>
-    </div>
+    <div class="container my-5 bg-1 text-center"><h1>3 Perspectives of Yourself at WWU 🔍</h1>
+        <img src="empty-hallway-background (1).jpg" alt="">
+        
+        <div class="d-flex justify-content-center">
+        
+        </div>
+      </div>
+<div class="container my-5 text-center">
+  <h3>Bootstrap Drawing Canvas</h3>
+  <div class="d-flex justify-content-center">
+    <canvas id="drawingCanvas" width="600" height="400" class="rounded shadow-sm"></canvas>
+  </div>
+</div>
 
-    <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        let painting = false;
+<script>
+  const canvas = document.getElementById('drawingCanvas');
+  const ctx = canvas.getContext('2d');
+  let drawing = false;
 
-        const setPosition = (e) => {
-            const { offsetX, offsetY } = e.touches ? e.touches[0] : e;
-            return { offsetX, offsetY };
-        };
+  // Set line style for precision
+  ctx.lineWidth = 2;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
 
-        const startDrawing = (e) => {
-            painting = true;
-            draw(e);
-        };
+  // Utility to get the position of the mouse or touch
+  function getPos(e) {
+    const rect = canvas.getBoundingClientRect();
+    return {
+      x: (e.touches ? e.touches[0].clientX : e.clientX) - rect.left,
+      y: (e.touches ? e.touches[0].clientY : e.clientY) - rect.top
+    };
+  }
 
-        const stopDrawing = () => {
-            painting = false;
-            ctx.beginPath();
-        };
+  // Start drawing
+  function startDrawing(e) {
+    drawing = true;
+    const pos = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(pos.x, pos.y);
+    e.preventDefault(); // Prevent scrolling
+  }
 
-        const draw = (e) => {
-            if (!painting) return;
-            const { offsetX, offsetY } = setPosition(e);
-            ctx.lineWidth = 5;
-            ctx.lineCap = 'round';
-            ctx.strokeStyle = 'black';
-            ctx.lineTo(offsetX, offsetY);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(offsetX, offsetY);
-        };
+  // Draw on the canvas
+  function draw(e) {
+    if (!drawing) return;
+    const pos = getPos(e);
+    ctx.lineTo(pos.x, pos.y);
+    ctx.stroke();
+    e.preventDefault(); // Prevent scrolling
+  }
 
-        ['mousedown', 'touchstart'].forEach(evt => canvas.addEventListener(evt, startDrawing));
-        ['mouseup', 'touchend'].forEach(evt => canvas.addEventListener(evt, stopDrawing));
-        ['mousemove', 'touchmove'].forEach(evt => canvas.addEventListener(evt, draw));
+  // Stop drawing
+  function stopDrawing() {
+    drawing = false;
+    ctx.closePath();
+  }
 
-        document.getElementById('clearBtn').onclick = () => ctx.clearRect(0, 0, canvas.width, canvas.height);
-    </script>
+  // Mouse events
+  canvas.addEventListener('mousedown', startDrawing);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', stopDrawing);
+  canvas.addEventListener('mouseleave', stopDrawing);
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  // Touch events
+  canvas.addEventListener('touchstart', (e) => { startDrawing(e); e.preventDefault(); });
+  canvas.addEventListener('touchmove', (e) => { draw(e); e.preventDefault(); });
+  canvas.addEventListener('touchend', stopDrawing);
+</script>
+
 </body>
 </html>

@@ -8,40 +8,62 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {   
-            
-            font-family:'Courier New', Courier, monospace;
+        .d-flex {
+            font-family: 'Courier New', Courier, monospace;
             font-weight: 900;
+
+
+
         }
 
+        .my-5 {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
 
-     img {
+
+        }
+
+        img {
             width: 100%;
         }
 
-     h1 {position: absolute;
+        h1 {
+            position: absolute;
             text-align: center;
             font-size: 120px;
             margin-top: 15%;
             color: rgb(194, 182, 159);
             font-weight: 900;
-            text-shadow: 2px 2px 4px  rgb(5, 14, 24);
+            text-shadow: 2px 2px 4px rgb(5, 14, 24);
             background-color: rgb(255, 254, 251);
-            
+
 
         }
-        #wwu{
+
+        #wwu {
             color: rgb(4, 58, 120);
-            text-shadow: 2px 2px 4px  #e1d6d6;
+            text-shadow: 2px 2px 4px #e1d6d6;
         }
-        .bg-2 { 
-        font-weight: 900;
+
+        .bg-2 {
+            background-color: #474e5d;
+            font-weight: 900;
             color: rgb(194, 182, 159);
-  }
-  .bg-2 h2{ text-shadow: 2px 2px 4px  rgb(5, 14, 24); color: rgb(194, 182, 159);
-    font-weight: 900; background-color: #474e5d; /* Dark Blue */
-  }
- 
+        }
+
+        .bg-2 h2 {
+            text-shadow: 2px 2px 4px rgb(5, 14, 24);
+            color: rgb(194, 182, 159);
+            font-weight: 900;
+            background-color: #474e5d;
+            /* Dark Blue */
+        }
+
+        .bg-2 {
+            font-weight: 900;
+            text-align: left;
+        }
+
         #drawingCanvas {
             border: 1px solid #ddd;
             background-color: #fff;
@@ -49,50 +71,67 @@
             /* Prevent default touch actions */
         }
 
-  @media screen and (max-width: 768px) {
- h3{font-weight: 900;
-    font-size: 20px;
+        @media screen and (max-width: 768px) {
+            h3 {
+                font-weight: 900;
+                font-size: 20px;
 
- }
-            h1{margin-top: 1;
-                font-size: 40px;
-                
             }
-    }
 
-  @media screen and (max-width: 480px) {
-   h1{
-    font-family:'Courier New', Courier, monospace;
+            h1 {
+                margin-top: 1;
+                font-size: 40px;
 
-    font-size: 50px;
-   }
-  }
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                margin-top: 1;
+                font-family: 'Courier New', Courier, monospace;
+
+                font-size: 50px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="d-flex justify-content-center">
-    
-   <h1>Points of View at <div id ="wwu">WWU 🔍</div> </h1>
-     <img src="empty-hallway-background (1).jpg" alt=""> 
-</div>
-        
 
-    <div class="container my-5 bg-2 text-center">
+        <h1>Points of View at <div id="wwu">WWU 🔍</div>
+        </h1>
+        <img src="empty-hallway-background (1).jpg" alt="">
+    </div>
+
+
+    <div class="container-fluid my-5 bg-2 ">
         <h2>1.Your Point of View </h2>
-  <div class="d-flex justify-content-center"></div>
-        <h3>Point of view: can refer to an individual’s perspective shaped by personal experiences, beliefs, and emotions.
-        </h3>
+        <div class="row ">
+            <div class="col-sm-8 text-left text-white">
+                <h3>Using your point of view, navigate the heart of campus, where you have a view of the library as well as as bond, haggard and miller hall. This place is filled with the sound of  skate boards rolling down, friendly laughter, and a fountain stream. People tend to meet friends here, study and even jump in the fountain when they graduate.  </h3>
+            </div>
 
-       
+          <div class="col-sm-4 text-right">
+            
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+
+
+
+
+    </div>
+
+    <div class="container my-5 text-center">
+        <h2>Your Neighbors Point of view </h2>
+        <div class="d-flex justify-content-center">
+            <canvas id="drawingCanvas" width="600" height="400" class="rounded shadow-sm"></canvas>
 
         </div>
     </div>
-    <div class="container my-5 text-center">
-        <h3>Bootstrap Drawing Canvas</h3>
-        <div class="d-flex justify-content-center">
-            <canvas id="drawingCanvas" width="600" height="400" class="rounded shadow-sm"></canvas>
-        </div>
     </div>
 </body>
 <script>

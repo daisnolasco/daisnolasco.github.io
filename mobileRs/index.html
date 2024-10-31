@@ -9,7 +9,14 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
        
+       body {
+        overflow-x: hidden;
+    }
 
+    .container-fluid, .custom-section, .dropdown-menu, .overlay, canvas {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
         .my-5 {
             font-family: 'Courier New', Courier, monospace;
             font-weight: 900;
@@ -23,9 +30,7 @@
    img{
     width: 100%;
    }
-   canvas{
-    width: 100%;
-   }
+
 
         .custom-section{
     background-image: url(./empty-hallway-background\ \(1\).jpg);
@@ -33,7 +38,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    height: 100vh;
+    height: 80vh;
 }
 
 
@@ -87,7 +92,8 @@
 </head>
 
 <body>
-    <div class="custom-section  container-fluid d-flex justify-content-center py-5 ">
+    <div class="container-fluid">
+    <div class=" container-fluid custom-section d-flex justify-content-center py-5 ">
 
         <div class="overlay p-5 text-center font-weight-heavy">
      
@@ -95,14 +101,14 @@
         
                 text-align: center;
                   font-weight: 900;
-        
+         
                 color: rgb(199, 190, 28);
 
                 text-shadow: 1px .1px 1px rgb(5, 14, 24);
                 background-color: rgb(255, 254, 251);
                 box-shadow: 1px .1px 1px rgb(5, 14, 24);">3 Perspectives Of Yourself At <div id="wwu"><h1 style="color: rgb(6, 43, 86);; font-weight: bold;" >WWU🔍</h1></h1>
-                </h1></h1>
-            <p>By: Daisy Nolasco</p>
+   
+            
           </div>
         </div>
   
@@ -146,33 +152,34 @@
 
 
 
-    <div class="container-fluid my-5 justify-content-center text-left">
+    <div class="container-fluid my-5 justify-content-center text-left py-5">
         <h1 style="  font-weight: 900;"> 2.Your Neighbor's Perspective 🔍</h2>
-        <div class="row text-center text-white font-weight-bold  "><h4>Switch phones with the person next to you, so they can draw you from their point of view. </h4></p>
-          
-            <button id="clearCanvas" class="btn btn-danger my-3">Clear</button>
+        <div class="  d-flex row text-center text-white font-weight-bold  ">
+            <h4 class="fs-1 fs-md-3 fs-lg-5 font-weight-bold text-left ml-3 justify-content-center ">Switch phones with the person next to you, so they can draw you from their point of view.  ,Bond ,Fischer, Wilison and Haggard.</h4>
+
+            <button id="clearCanvas" class="btn btn-danger text-center d-flex justify-content-center align-items-center  my-3">Clear</button>
         </div>
 
 
 
-        <div class="d-flex justify-content-center text-white py-5">
+        <div class="d-flex justify-content-center text-white text-center fs-1 fs-md-3 fs-lg-5   py-1">
 
-         
+            <canvas id="drawingCanvas" width="600" height="700" class="rounded shadow-sm fs-1 fs-md-3 fs-lg-5  "></canvas>
 
         </div>
     </div>
-    <div class="container-fluid my-5 justify-content-center ">
+    <div class="container-fluid my-5 justify-content-center py-5 ">
         <h2 style="font-weight: 900; "> 3.Birds eye Perspective🔍</h2>
-        <div class="row text-center justify-content-center text-white  ">
-            <h3>See Yourself through a birds eye View below</h3>
+        <div class="row text-center justify-content-center text-white font-weight-bold "><h4 class="fs-1 fs-md-3 fs-lg-5 font-weight-bold">
+            See Yourself through a birds eye View below</h4>
 
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item">
-                <div id="webcamImage"><img alt="Webcam view overlooking Red Square" height="620"
-                        src="https://redsquarewebcam.wwu.edu/mjpg/video.mjpg" width="920"></div>
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item py-5">
+                <div id="webcamImage"><img alt="Webcam view overlooking Red Square" height="420"
+                        src="https://redsquarewebcam.wwu.edu/mjpg/video.mjpg" width="20"></div>
 
             </div>
         </div>
-    </div>
+    </div></div>
 </body>
 <script>
     const canvas = document.getElementById('drawingCanvas');
@@ -239,3 +246,4 @@
     crossorigin="anonymous"></script>
 
 </html>
+

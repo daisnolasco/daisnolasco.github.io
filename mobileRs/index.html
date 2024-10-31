@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Drawing Canvas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+
+        .my-5 {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+            background-color: rgb(6, 43, 86);
+            font-weight: 900;
+            color: rgb(199, 190, 28);
+        }
+
+
+
+   img{
+    width: 100%;
+   }
+   canvas{
+    width: 100%;
+   }
+
+        .custom-section{
+    background-image: url(./empty-hallway-background\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+
+        
+
+        #wwu{
+            color: rgb(75, 100, 129);
+        }
+
+
+
+        .my-2 h3 {
+            font-weight: 900;
+
+
+        }
+
+
+        .btn {
+
+            background-color: rgb(194, 182, 159);
+            ;
+            background-color: rgb(199, 190, 28);
+            ;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+        }
+
+        .btn:hover {
+            background-color: rgb(194, 182, 159);
+
+        }
+
+        .btn :active {
+            background-color: rgb(194, 182, 159);
+        }
+
+        #drawingCanvas {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            touch-action: none;
+            /* Prevent default touch actions */
+        }
+
+        #clearBtn {
+            position: relative;
+            ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="custom-section  container-fluid d-flex justify-content-center py-5 ">
+
+        <div class="overlay p-5 text-center font-weight-heavy">
+     
+                <h1 style=" font-family: 'Courier New', Courier, monospace;
+        
+                text-align: center;
+                  font-weight: 900;
+        
+                color: rgb(199, 190, 28);
+
+                text-shadow: 1px .1px 1px rgb(5, 14, 24);
+                background-color: rgb(255, 254, 251);
+                box-shadow: 1px .1px 1px rgb(5, 14, 24);">3 Perspectives Of Yourself At <div id="wwu"><h1 style="color: rgb(6, 43, 86);; font-weight: bold;" >WWU🔍</h1></h1>
+                </h1></h1>
+            <p>By: Daisy Nolasco</p>
+          </div>
+        </div>
+  
+
+       
+    </div>
+
+
+
+    <div class="container-fluid .d-print-inline-block my-5 py-5 font-weight-bold">
+        <h2 class="fs-1 fs-md-3 fs-lg-5 font-weight-bold">1.Your Perspective 🔍</h2>
+        <div class="row .d-print-inline-block py-5 ">
+            <div class="col-sm-6  p-3  text-white text-left"><h4 class="fs-1 fs-md-3 fs-lg-5 font-weight-bold"> Through your perspective navigate the area of 
+                campus, thats filled with the sound of skate boards rolling, ringing coming from the clock tower, a fountain stream and groups of friends coming from all over its 4 intersections.
+                This place is surrounded with names such as Miller ,Bond ,Fischer, Wilison and Haggard.</h4>
+
+            </div>
+
+
+            <div class="dropdown col-sm-5  text-right font-weight-bold fs-1 fs-md-3 fs-lg-5  ">
+                <button class="btn dropdowntext-right fs-1 fs-md-3 fs-lg-5   py-2 my-5 text-white " type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false"><h4 class="fs-1 fs-md-3 fs-lg-5 font-weight-bold">Click To See If You're Right </h4>
+
+                </button>
+                <ul class="dropdown-menu fs-1 fs-md-3 fs-lg-5  ">
+                    <li class=" dropdown-item ">
+                        <img src="BH STOCK WWU Red Square Fountain.jpeg">
+                    
+                    </li>
+                    <li style="font-weight: 900;text-align: center; color:rgb(16, 86, 166) ;font-family: 'Courier New', Courier, monospace;
+                font-size: 30px; ;" >Red square</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid my-5 justify-content-center text-left">
+        <h1 style="  font-weight: 900;"> 2.Your Neighbor's Perspective 🔍</h2>
+        <div class="row text-center text-white font-weight-bold  "><h4>Switch phones with the person next to you, so they can draw you from their point of view. </h4></p>
+          
+            <button id="clearCanvas" class="btn btn-danger my-3">Clear</button>
+        </div>
+
+
+
+        <div class="d-flex justify-content-center text-white py-5">
+
+         
+
+        </div>
+    </div>
+    <div class="container-fluid my-5 justify-content-center ">
+        <h2 style="font-weight: 900; "> 3.Birds eye Perspective🔍</h2>
+        <div class="row text-center justify-content-center text-white  ">
+            <h3>See Yourself through a birds eye View below</h3>
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item">
+                <div id="webcamImage"><img alt="Webcam view overlooking Red Square" height="620"
+                        src="https://redsquarewebcam.wwu.edu/mjpg/video.mjpg" width="920"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const canvas = document.getElementById('drawingCanvas');
+    const ctx = canvas.getContext('2d');
+    let drawing = false;
+
+    // Set line style for precision
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    // Utility to get the position of the mouse or touch
+    function getPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+            x: (e.touches ? e.touches[0].clientX : e.clientX) - rect.left,
+            y: (e.touches ? e.touches[0].clientY : e.clientY) - rect.top
+        };
+    }
+
+    // Start drawing
+    function startDrawing(e) {
+        drawing = true;
+        const pos = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+        e.preventDefault(); // Prevent scrolling
+    }
+
+    // Draw on the canvas
+    function draw(e) {
+        if (!drawing) return;
+        const pos = getPos(e);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        e.preventDefault(); // Prevent scrolling
+    }
+
+    // Stop drawing
+    function stopDrawing() {
+        drawing = false;
+        ctx.closePath();
+    }
+
+    // Mouse events
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseleave', stopDrawing);
+
+    // Touch events
+    canvas.addEventListener('touchstart', (e) => { startDrawing(e); e.preventDefault(); });
+    canvas.addEventListener('touchmove', (e) => { draw(e); e.preventDefault(); });
+    canvas.addEventListener('touchend', stopDrawing);
+    document.getElementById('clearCanvas').addEventListener('click', () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    });
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</html>

@@ -13,9 +13,9 @@
         overflow-x: hidden;
     }
 
-    .container-fluid, .custom-section, .dropdown-menu, .overlay{
+    .container-fluid, .custom-section, .dropdown-menu, .overlay {
         max-width: 100%;
-  
+        overflow-x: hidden;
     }
         .my-5 {
             font-family: 'Courier New', Courier, monospace;
@@ -95,18 +95,17 @@
     <div class="container-fluid">
     <div class=" container-fluid custom-section d-flex justify-content-center py-5 ">
 
-        <div class="overlay p-5 text-center font-weight-heavy">
+        <div class=" p-5 text-center font-weight-heavy">
      
                 <h1 style=" font-family: 'Courier New', Courier, monospace;
         
-
+                text-align: center;
                   font-weight: 900;
          
                 color: rgb(199, 190, 28);
 
                 text-shadow: 1px .1px 1px rgb(5, 14, 24);
                 background-color: rgb(255, 254, 251);
-        
                 box-shadow: 1px .1px 1px rgb(5, 14, 24);">3 Perspectives Of Yourself At <div id="wwu"><h1 style="color: rgb(6, 43, 86);; font-weight: bold;" >WWU🔍</h1></h1>
    
             
@@ -156,19 +155,16 @@
     <div class="container-fluid my-5 justify-content-center text-left py-5">
         <h1 style="  font-weight: 900;"> 2.Your Neighbor's Perspective 🔍</h2>
         <div class="  d-flex row text-center text-white font-weight-bold  ">
-            <h4 class="fs-1 fs-md-3 fs-lg-5 font-weight-bold text-left ml-3 justify-content-center ">Switch phones with the person next to you, so they can draw you from their point of view.</h4>
+            <h4 class="fs-1 fs-md-3 fs-lg-5 font-weight-bold text-left ml-3 justify-content-center ">Switch phones with the person next to you, so they can draw you from their point of view.  ,Bond ,Fischer, Wilison and Haggard.</h4>
 
-            
+            <button id="clearCanvas" class="btn btn-danger text-center d-flex justify-content-center align-items-center  my-3">Clear</button>
         </div>
 
-<button id="clearCanvas" class="btn btn-danger text-center d-flex justify-content-center align-items-center  my-3">Clear</button>
 
 
-            <div class="d-flex justify-content-center text-white">
-    
-                <canvas id="drawingCanvas" width="600" height="400" class="rounded shadow-sm"></canvas>
-               
+        <div class="d-flex justify-content-center text-white text-center fs-1 fs-md-3 fs-lg-5   py-1">
 
+            <canvas id="drawingCanvas" width="600" height="400" class="rounded shadow-sm fs-1 fs-md-3 fs-lg-5  "></canvas>
 
         </div>
     </div>
@@ -250,4 +246,3 @@
     crossorigin="anonymous"></script>
 
 </html>
-       

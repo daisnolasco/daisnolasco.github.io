@@ -1,4 +1,5 @@
-fetch('housedata.json')
+
+fetch('houseData.json')
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById('architecturetable');
@@ -38,4 +39,5 @@ fetch('housedata.json')
     });
   })
   .catch(error => console.error('Error loading JSON:', error));
+  
 

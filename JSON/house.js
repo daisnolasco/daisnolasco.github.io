@@ -1,11 +1,11 @@
 
-fetch('houseData.json')
+fetch('housedata.json')
   .then(response => response.json())
   .then(data => {
-    const container = document.getElementById('architectureTable');
+    const container = document.getElementById('architecturetable');
 
     data.forEach(item => {
-
+     
       const card = document.createElement('div');
       card.className = 'card';
 
@@ -22,20 +22,21 @@ fetch('houseData.json')
       const description = document.createElement('p');
       description.textContent = item.text;
 
-
+   
       const link = document.createElement('a');
       link.href = item.WebsiteUrl;
       link.target = "_blank";
       link.textContent = "Learn more";
 
-
+    
       card.appendChild(title);
       card.appendChild(img);
       card.appendChild(description);
       card.appendChild(link);
 
-
+   
       container.appendChild(card);
     });
   })
   .catch(error => console.error('Error loading JSON:', error));
+

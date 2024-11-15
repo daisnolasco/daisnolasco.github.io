@@ -3,9 +3,9 @@
 // [cf: Communications of the ACM, Vol. 9, #1 (January 1966): p 36-45.]
 
 var elizaInitials = [
-"Welcome to Trivia Bot! Type 'ready' when you're ready for a question, 's'to skip a question and 'g' for ",
-    "Hi Im Tina Trivia! Let's play trivia. Just type 'ready' to start, and 'n' if you dont know an answer.",
-    "Hey! Ready to test your trivia knowledge? Type 'ready' to begin, and 'n' if you dont know an answer.",
+"Welcome, Im Tina the Trivia Bot! When you're ready Type 'ready' in the text box below , and 'q' to end the game. ",
+    "Hi Im Tina The Trivia Bot! Let's play trivia.  When you're ready Type 'ready' in the text box below , and 'q' to end the game. .",
+    "Hey Im Tina the Trivia Bot! I love Trivia Lets play ! Ready to test your trivia knowledge?  When you're ready Type 'ready' in the text box below , and 'g' to end the game. ",
 ];
 
   
@@ -124,13 +124,7 @@ var elizaInitials = [
    ]],
 
 
-  ["jupiter", 5, [
-   ["*", [
-"Great job! That’s right.Try this one: Who was the first President of the United States?",
-      
-   
-    ]]
-  ]],
+
   ["blue", 5, [
    ["*", [
     "Right! What is the chemical symbol for water!"
@@ -144,34 +138,44 @@ var elizaInitials = [
   ]],
   ["Mario", 0, [
    ["*", [
-       "Perfect! Here’s a question: What famous wizard appears in a popular book series?",
-       "Got it! Here's another: What is the capital of France?",
-       "Alright! Try this: Who painted the Mona Lisa?",
-       "Okay! Here’s your question: What is the largest planet?"
+       "Perfect!What is the name of the fairy in Peter Pan?",
     ]]
   ]],
-  ["no", 0, [
+  ["tinkerbelle", 0, [
    ["*", [
-       "That's alright! We can try again later.",
-       "Okay, take a break and come back anytime.",
-       "No problem! Feel free to return when you're ready.",
-       "Alright, we can pause for now."
+    " Great! Thanks for playing?",
+     "Correct!!!! This was so much fun!! Thanks for Playing!!",
     ]]
   ]],
-  ["what", 0, [
+
+
+
+
+
+  ["jupiter", 5, [
+    ["*", [
+ "Great job! That’s right.How many legs does a spider have?",
+       
+    
+     ]]
+   ]],
+  ["8", 0, [
    ["*", [
-       "I think the answer you're looking for is (2).",
-       "Hmm, I believe the answer is (2).",
-       "This answer might help: (2).",
-       "I think the answer could be (2)."
+       "Which planet in our Solar System is known for having a ring?", 
     ]]
   ]],
-  ["who", 0, [
+
+  ["saturn", 0, [
+    ["*", [
+        "A scientist who studies rocks is called a what?", 
+     ]]
+   ]],
+ 
+
+  ["geologist", 0, [
    ["*", [
-       "The answer could be someone famous like (2).",
-       "Let’s try to figure out who could be (2).",
-       "I think the answer may be (2).",
-       "Maybe it’s (2)!"
+       "Thats,Right!! Thanks for Playing",
+       "Correct!!!! This was so much fun!! Thanks for Playing"
     ]]
   ]],
   ["why", 0, [
@@ -190,15 +194,8 @@ var elizaInitials = [
        "Spot on! You’re doing great."
     ]]
   ]],
-  ["s", 0, [
-   ["*", [
-       "Alright, skipping to the next question: Who was the first President of the United States?",
-       "Skipped! Here’s a new one: What year did the Titanic sink?",
-       "Moving to a new question: Who wrote 'To Kill a Mockingbird'?",
-       "Let’s try another: What is the longest river in the world?"
-    ]]
-  ]],
-  ["game over", 0, [
+
+  ["q", 0, [
    ["*", [
        "Goodbye! Thanks for playing!",
        "That was a fun game. See you next time!",

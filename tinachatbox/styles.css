@@ -1,43 +1,59 @@
-body{
+body{ 
     color: white;
-
+background-color: black;
     margin: 0;
     font-weight: bold;
-    font-size: 3rem;
     font-weight: bold;
-
-    color: #fff; /* Base text color */
-    text-shadow: 
-      0 0 10px #f00, /* Outer red glow */
-      0 0 10px #f00, 
-      0 0 20px #ff0, /* Yellow inner glow */
-      0 0 40px #ff0, 
-      0 0 50px #ff0;
 background-image: url(./15612859632_4cbef017d1_o.jpg);
-    font-family: 'Impact', 'Arial Black', sans-serif; /* Bold and dramatic fonts */
+
+   
 background-size: cover;
 
 }
-h3{
-    font-size: 80px;
-    letter-spacing: 7px;
+.lights{width: 100%;
+    margin: 0;
+    background-size: cover;
+position: absolute;
+
+   
+}
+.lights img{margin:0;
+    position:bas;
+width: 100%;
+position: absolute;
+
+
+}
+h1{  color: lightyellow;
+     font-family: 'Impact', 'Arial Black', sans-serif; /* Bold and dramatic fonts */
+    text-shadow:  
+    0 0 10px #f00, /* Outer red glow */
+    0 0 20px #f00, 
+    0 0 20px #ff0, /* Yellow inner glow */
+    0 0 40px #ff0, 
+    0 0 50px #ff0;
+   
+    font-size: 100px;
+
+    letter-spacing: 10px;
 }
 
 textarea{
     background-color: black;
-    font-size: 15px;
+    font-size: 20px;
     margin: 0;
 align-items: center;
-    color:white;  text-shadow: 
+    color:gold;  text-shadow: 
     0 0 5px #f00, /* Outer red glow */
 
     0 0 1px #ff0, /* Yellow inner glow */
 
-    0 0 1px #ff0, 
+    0 0 1px wheat, 
     0 0 10px #ff0
 }
-table{
+table{    color:gold;
     align-items: center;
+    border: black;
 }
 input{align-items: center;
     background-color: black;
@@ -46,4 +62,17 @@ input{align-items: center;
     height: 40px;
     font-size: 20px;
 
+}
+h5{ font-size: 15px;
+    color:gold; 
+}
+a{
+color: gold;    
+}
+td{
+    color:gold;
+}
+input{
+    background-color:black;
+    color:gold
 }

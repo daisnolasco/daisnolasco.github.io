@@ -1,7 +1,7 @@
 <HTML>
 <HEAD>
     <TITLE>Tina Trivia</TITLE>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
     <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="elizabot.js"></SCRIPT>
     <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="elizadata.js"></SCRIPT>
 
@@ -59,14 +59,19 @@ function elizaStep() {
 
 <BODY TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" MARGINHEIGHT="0" MARGINWIDTH="0" STYLE="border:0" onload="window.setTimeout('elizaReset()',100)"><A NAME="top"></A>
 
+  <div class="lights">
+  
+  </div>
 <CENTER>
 <P>&nbsp;</P>
-<H3>Tina Trivia</H3>
+
+<H1>Tina Trivia</h1>
+
 <TABLE BORDER="0" CELLSPACING="10" CELLPADDING="0">
 <FORM NAME="e_form" onsubmit="elizaStep();return false">
-<TR><TD COLSPAN="2"><TEXTAREA NAME="e_display" COLS="60" ROWS="20"></TEXTAREA></TD></TR>
+<TR><TD COLSPAN="2"><TEXTAREA NAME="e_display" COLS="80" ROWS="20"></TEXTAREA></TD></TR>
 <TR VALIGN="middle">
-    <TD><INPUT TYPE="text" NAME="e_input" SIZE="50"></TD>
+    <TD><INPUT TYPE="text" NAME="e_input" SIZE="40"></TD>
     <TD ALIGN="right"><INPUT TYPE="submit" VALUE="&nbsp;Answer&nbsp;"> <INPUT TYPE="reset" VALUE="Reset" onClick="window.setTimeout('elizaReset()',100)"></TD>
 </TR>
 </FORM>
@@ -74,10 +79,18 @@ function elizaStep() {
 </CENTER>
 
 <P>&nbsp;</P>
-<P ALIGN="center">Enjoy Tina Trivia!</P>
+<P ALIGN="center"></P>
 <TABLE BORDER="0" CELLSPACING="12" CELLPADDDING="0">
 <TR><TD COLSPAN="2">&nbsp;</TD></TR>
 </TABLE>
-
+<p>
+ 
+<h5> References:
+   <a href="https://chatgpt.com/share/6737b507-0fd0-800b-8848-21519536ed61">Chatgpt conversation</a>
+  ELIZA is a natural language conversation program described by Joseph Weizenbaum in January 1966 [1].
+  It features the dialog between a human user and a computer program representing a mock Rogerian psychotherapist.
+  The original program was implemented on the IBM 7094 of the Project MAC time-sharing system at MIT and was written in MAD-SLIP.</h5>
+ 
+</p>
 </BODY>
 </HTML>

@@ -210,7 +210,8 @@ input {
 }
 
 
-#page1 {
+#page1 {background-image: url(pg1.png);
+	background-size: cover;
 	z-index: 14;
 }
 
@@ -272,12 +273,13 @@ input {
 }#page13 {background-image: url(dec/Untitled\ \(6\)\ copy.png);
 	background-size: cover;
 	z-index: 2;
-}#page14 {
+}#page14 {background-image: url(Rectangle\ 2.png);
 	z-index: 1;
 }
 
-#checkbox-cover:checked ~ .book {
+#checkbox-cover:checked ~ .book {  	
 	transform: translateX(200px);
+
 	
 
 }
@@ -290,12 +292,12 @@ input {
 	box-shadow: 0 0 3px rgb(99, 98, 98);
 }
 #checkbox-page1:checked ~ .book #page1 {
-	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transition: transform 1.2s, z-index 0.2s 0.2s;
 	transform: rotateY(-180deg);
 	z-index: 2;box-shadow: 0 0 5px rgb(41, 41, 41);
 }
-#checkbox-page2:checked ~ .book #page2 {
-	transform: rotateY(-180deg);box-shadow: 0 0 5px rgb(41, 41, 41);
+#checkbox-page2:checked ~ .book #page2 {	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transform: rotateY(-180deg);
 	z-index: 3;
 }
 #checkbox-page3:checked ~ .book #page3 {
@@ -424,3 +426,4 @@ text-align: center;
 	box-shadow: 0 0 5px rgb(41, 41, 41);
 	background-color: rgba(222, 173, 59, 0.761);
 }
+

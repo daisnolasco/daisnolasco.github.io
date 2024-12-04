@@ -1,36 +1,78 @@
 body {
 	font-family: "Poppin", sans-serif;
 	height: 100vh;
-	display: flex;
+
 	align-items: center;
 	justify-content: center;
 	background-image: url(white-wooden-texture-flooring-background.jpg);
-	background-size: cover;
 }
-.backround{font-size: 100px;
+nav{		
+	font-family: Fjalla One	;
+border-bottom: 2px black;
+	margin-top: 0 auto;
+	padding: 2PX;
+
+}
+
+.background{
+
 	display: flex;
+
+	font-size: 100px;
 }
-.backround-left{font-size: 100px;
-float: left;
-text-align: center;
-}
-.backround-right{font-size: 80px;
-	float: right;
-	display: flex;
+
+.box > * {width:550px ;
 	
-}
+
+  }
+  
+  .box {
+	
+	display: flex;
+
+  }
+  
+  .one {letter-spacing: 2px;
+	flex: 1;
+	font-size: 20PX;
+
+  }
+  
+  .two {
+	flex: 1;	
+  }
+  
+  .three {
+	flex: 1;letter-spacing: 3px;
+	text-align: center;
+	font-size: 20PX;
+
+  }
+  .four{letter-spacing: 3px;
+	font-size: 20PX;
+
+	flex: 1;
+	float: right;
+	text-align: right;
+  }
+
+
 .book {
+	margin: 0 auto;
 	width: 550px;
 	height: 650px;
 	position: relative;
 	transition-duration: 1s;
 	perspective: 1500;
+	display: flex;
+	
 }
+
 input {
 	display: none;
 }
 .cover, .back-cover {
-
+    background-color: #e4decb;
 	width: 100%;
 	height: 100%;
 	border-radius: 0 15px 15px 0;
@@ -44,33 +86,23 @@ input {
 	position: absolute;
 	z-index: 15;
     background-color: #e4decb;
-    background-image: url(picmix.com_2597982.png);
+    background-image: url(coverr.png);
 	background-size: cover;
 	transition: transform 1s;
 }
-svg{margin-top: 5%;
-	font   : bold 100px Century Gothic, Arial;
-	width  : 100%;
-	height : 120px;
-	text-align: center;
-  }
-  
-  text{
-	fill            : none;
-	stroke          : black;
-	stroke-width    : .5px;
-	stroke-linejoin : round;
-	animation       : 2s pulsate infinite;
-  }
+
   
   @keyframes pulsate {
 	50%{ stroke-width:5px }
   }
-.cover label {
+.cover label {text-align: center;
 	width: 100%;
 	height: 100%;
-    font-size: 60PX;
+	margin-top: 10%;
+    font-size: 45PX;
+	font-family: Fjalla One	;
 	cursor: pointer;
+	
 }
 .sticky-note {
     background: #b8ef04; /* Light yellow color */
@@ -189,7 +221,7 @@ svg{margin-top: 5%;
 	z-index: 13;
 }
 
-#page3 {background-image: url(feb/Image\ 12-2-24\ at\ 11.32\ PM.jpeg);
+#page3 {background-image: url(feb/Image1.jpeg);
 	background-size: cover;
 	z-index: 12;
 	box-shadow: 0 0 5px rgb(41, 41, 41);
@@ -234,9 +266,11 @@ svg{margin-top: 5%;
 #page11 {background-image: url(OCTOBER/Untitled2\ \(5\).png);
 	background-size: cover;
 	z-index: 4;
-}#page12 {
+}#page12 {background-image: url(nov/Untitled\ \(6\)\ copy.png);
+	background-size: cover;
 	z-index: 3;
-}#page13 {
+}#page13 {background-image: url(dec/Untitled\ \(6\)\ copy.png);
+	background-size: cover;
 	z-index: 2;
 }#page14 {
 	z-index: 1;
@@ -244,6 +278,7 @@ svg{margin-top: 5%;
 
 #checkbox-cover:checked ~ .book {
 	transform: translateX(200px);
+	
 
 }
 #checkbox-cover:checked ~ .book .cover {

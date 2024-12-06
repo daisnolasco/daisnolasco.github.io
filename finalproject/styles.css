@@ -1,19 +1,23 @@
 body {
 	font-family: "Poppin", sans-serif;
 	height: 100vh;
-
 	align-items: center;
 	justify-content: center;
 	background-image: url(white-wooden-texture-flooring-background.jpg);
+	background-size: cover;
 }
 nav{		
 	font-family: Fjalla One	;
-border-bottom: 2px black;
+border: 2px rgb(255, 254, 254);
 	margin-top: 0 auto;
 	padding: 2PX;
+	text-decoration: none;
 
 }
-
+nav a{
+	text-decoration: none;
+	color: #000000;
+}
 .background{
 
 	display: flex;
@@ -21,13 +25,17 @@ border-bottom: 2px black;
 	font-size: 100px;
 }
 
-.box > * {width:550px ;
-	
-
+.box > * {box-shadow: 0 0 5px rgb(0, 0, 0);
+	border: 8px  #ffffff;
+	border-style:solid ;
+	margin-top: 0 auto;
+	padding: 1px;
   }
   
   .box {
-	
+	border: #ffffff;	box-shadow: 0 0 5px rgb(41, 41, 41);
+	border-style: solid;
+
 	display: flex;
 
   }
@@ -38,8 +46,12 @@ border-bottom: 2px black;
 
   }
   
-  .two {
+  .two {	flex: 1;letter-spacing: 3px;
+	text-align: center;
+	font-size: 20PX;
 	flex: 1;	
+	text-decoration: none;
+	color: #000000;
   }
   
   .three {
@@ -48,18 +60,13 @@ border-bottom: 2px black;
 	font-size: 20PX;
 
   }
-  .four{letter-spacing: 3px;
-	font-size: 20PX;
-
-	flex: 1;
-	float: right;
-	text-align: right;
-  }
+  
 
 
 .book {
 	margin: 0 auto;
 	width: 550px;
+	margin-top: 3%;
 	height: 650px;
 	position: relative;
 	transition-duration: 1s;
@@ -82,28 +89,124 @@ input {
 	justify-content: center;
 	transform-origin: center left;
 }
-.cover {
+.cover{
 	position: absolute;
 	z-index: 15;
-    background-color: #e4decb;
-    background-image: url(coverr.png);
+    background-image: url(cover2.png);
 	background-size: cover;
-	transition: transform 1s;
+	transition: transform 1s;   
+	background-color: #231f14;
+	
 }
-
-  
-  @keyframes pulsate {
-	50%{ stroke-width:5px }
-  }
-.cover label {text-align: center;
+.cover label{
+	text-align: center;
 	width: 100%;
 	height: 100%;
 	margin-top: 10%;
-    font-size: 45PX;
-	font-family: Fjalla One	;
+	font-size: 45px;
+	font-family: fjalla one;
 	cursor: pointer;
-	
+	text-shadow: 0 0 5px rgb(255, 255, 255);
 }
+
+  .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 900px;
+	height: 200px;
+	pointer-events: none; /* Prevent interaction if needed */padding: 10px;
+
+  }
+  .cover-grid-container {
+	margin: 0 auto;
+	display: flex;	background-image: url(freepik-export-202412060154209rPC.png);
+	background-size: cover;
+    text-align: center;
+	width: 300px;
+	overflow: hidden;
+	height:300px;
+	margin-left: 45%;
+	
+	height: fit-content;
+
+
+
+} 
+
+.cover-grid-item {
+    display: flex;
+	overflow: hidden;
+	margin: 0 auto;
+    flex-direction: column;
+	margin-top: 20%;
+    align-items: center;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	margin-bottom: 20%;
+
+	
+	
+	
+
+}
+
+
+	
+	
+	
+
+
+
+  
+
+
+
+/* Animations Effect */
+@keyframes todown {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    60% {
+        opacity: 0.6;
+        transform: translateY(1.2em);
+        transform: scale(0.5, 0.5);
+        color: rgb(0, 0, 255);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+  @keyframes pulsate {
+	50%{ stroke-width:5px }
+  }
+  .backofpage-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 99;
+}
+
 .sticky-note {
     background: #b8ef04; /* Light yellow color */
     width: 300px;
@@ -131,7 +234,7 @@ input {
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-.back-cover {
+.back-cover {  background-color: #e4decb;
 	position: relative;
 	z-index: -1;
 }
@@ -267,7 +370,7 @@ input {
 #page11 {background-image: url(OCTOBER/Untitled2\ \(5\).png);
 	background-size: cover;
 	z-index: 4;
-}#page12 {background-image: url(nov/Untitled\ \(6\)\ copy.png);
+}#page12 {background-image: url(nov/nov.png);
 	background-size: cover;
 	z-index: 3;
 }#page13 {background-image: url(dec/Untitled\ \(6\)\ copy.png);
@@ -275,18 +378,25 @@ input {
 	z-index: 2;
 }#page14 {background-image: url(Rectangle\ 2.png);
 	z-index: 1;
+	font-size: 20px;
+}
+#page14 a {
+	font-size: 20px;
 }
 
 #checkbox-cover:checked ~ .book {  	
 	transform: translateX(200px);
+	background-color: antiquewhite;
 
 	
 
 }
-#checkbox-cover:checked ~ .book .cover {
+#checkbox-cover:checked ~ .book .cover  {
 	transition: transform 1.5s, z-index 0.5s 0.5s;
 	transform: rotateY(-180deg);
 	z-index: 1;
+	
+
 }
 #checkbox-cover:checked ~ .book .page {	transition: transform 1.5s, z-index 0.5s 0.5s;
 	box-shadow: 0 0 3px rgb(99, 98, 98);
@@ -426,4 +536,5 @@ text-align: center;
 	box-shadow: 0 0 5px rgb(41, 41, 41);
 	background-color: rgba(222, 173, 59, 0.761);
 }
+
 

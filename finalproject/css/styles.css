@@ -1,36 +1,85 @@
 body {
 	font-family: "Poppin", sans-serif;
 	height: 100vh;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-image: url(white-wooden-texture-flooring-background.jpg);
 	background-size: cover;
 }
-.backround{font-size: 100px;
+nav{		
+	font-family: Fjalla One	;
+border: 2px rgb(255, 254, 254);
+	margin-top: 0 auto;
+	padding: 2PX;
+	text-decoration: none;
+
+}
+nav a{
+	text-decoration: none;
+	color: #000000;
+}
+.background{
+
 	display: flex;
+
+	font-size: 100px;
 }
-.backround-left{font-size: 100px;
-float: left;
-text-align: center;
-}
-.backround-right{font-size: 80px;
-	float: right;
+
+.box > * {box-shadow: 0 0 5px rgb(0, 0, 0);
+	border: 8px  #ffffff;
+	border-style:solid ;
+	margin-top: 0 auto;
+	padding: 1px;
+  }
+  
+  .box {
+	border: #ffffff;	box-shadow: 0 0 5px rgb(41, 41, 41);
+	border-style: solid;
+
 	display: flex;
-	
-}
+
+  }
+  
+  .one {letter-spacing: 2px;
+	flex: 1;
+	font-size: 20PX;
+
+  }
+  
+  .two {	flex: 1;letter-spacing: 3px;
+	text-align: center;
+	font-size: 20PX;
+	flex: 1;	
+	text-decoration: none;
+	color: #000000;
+  }
+  
+  .three {
+	flex: 1;letter-spacing: 3px;
+	text-align: center;
+	font-size: 20PX;
+
+  }
+  
+
+
 .book {
+	margin: 0 auto;
 	width: 550px;
+	margin-top: 3%;
 	height: 650px;
 	position: relative;
 	transition-duration: 1s;
 	perspective: 1500;
+	display: flex;
+	
 }
+
 input {
 	display: none;
 }
 .cover, .back-cover {
-
+    background-color: #e4decb;
 	width: 100%;
 	height: 100%;
 	border-radius: 0 15px 15px 0;
@@ -40,38 +89,124 @@ input {
 	justify-content: center;
 	transform-origin: center left;
 }
-.cover {
+.cover{
 	position: absolute;
 	z-index: 15;
-    background-color: #e4decb;
-    background-image: url(picmix.com_2597982.png);
+    background-image: url(cover2.png);
 	background-size: cover;
-	transition: transform 1s;
+	transition: transform 1s;   
+	background-color: #231f14;
+	
 }
-svg{margin-top: 5%;
-	font   : bold 100px Century Gothic, Arial;
-	width  : 100%;
-	height : 120px;
+.cover label{
 	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin-top: 10%;
+	font-size: 45px;
+	font-family: fjalla one;
+	cursor: pointer;
+	text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+  .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 900px;
+	height: 200px;
+	pointer-events: none; /* Prevent interaction if needed */padding: 10px;
+
   }
+  .cover-grid-container {
+	margin: 0 auto;
+	display: flex;	background-image: url(freepik-export-202412060154209rPC.png);
+	background-size: cover;
+    text-align: center;
+	width: 300px;
+	overflow: hidden;
+	height:300px;
+	margin-left: 45%;
+	
+	height: fit-content;
+
+
+
+} 
+
+.cover-grid-item {
+    display: flex;
+	overflow: hidden;
+	margin: 0 auto;
+    flex-direction: column;
+	margin-top: 20%;
+    align-items: center;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	margin-bottom: 20%;
+
+	
+	
+	
+
+}
+
+
+	
+	
+	
+
+
+
   
-  text{
-	fill            : none;
-	stroke          : black;
-	stroke-width    : .5px;
-	stroke-linejoin : round;
-	animation       : 2s pulsate infinite;
-  }
-  
+
+
+
+/* Animations Effect */
+@keyframes todown {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    60% {
+        opacity: 0.6;
+        transform: translateY(1.2em);
+        transform: scale(0.5, 0.5);
+        color: rgb(0, 0, 255);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
   @keyframes pulsate {
 	50%{ stroke-width:5px }
   }
-.cover label {
+  .backofpage-page {
+	transform: rotateY(180deg);
+	position: absolute;
 	width: 100%;
 	height: 100%;
-    font-size: 60PX;
-	cursor: pointer;
+	backface-visibility: hidden;
+	z-index: 99;
 }
+
 .sticky-note {
     background: #b8ef04; /* Light yellow color */
     width: 300px;
@@ -99,7 +234,7 @@ svg{margin-top: 5%;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-.back-cover {
+.back-cover {  background-color: #e4decb;
 	position: relative;
 	z-index: -1;
 }
@@ -178,7 +313,8 @@ svg{margin-top: 5%;
 }
 
 
-#page1 {
+#page1 {background-image: url(pg1.png);
+	background-size: cover;
 	z-index: 14;
 }
 
@@ -189,7 +325,7 @@ svg{margin-top: 5%;
 	z-index: 13;
 }
 
-#page3 {background-image: url(feb/Image\ 12-2-24\ at\ 11.32\â€¯PM.jpeg);
+#page3 {background-image: url(feb/Image1.jpeg);
 	background-size: cover;
 	z-index: 12;
 	box-shadow: 0 0 5px rgb(41, 41, 41);
@@ -234,33 +370,44 @@ svg{margin-top: 5%;
 #page11 {background-image: url(OCTOBER/Untitled2\ \(5\).png);
 	background-size: cover;
 	z-index: 4;
-}#page12 {
+}#page12 {background-image: url(nov/nov.png);
+	background-size: cover;
 	z-index: 3;
-}#page13 {
+}#page13 {background-image: url(dec/Untitled\ \(6\)\ copy.png);
+	background-size: cover;
 	z-index: 2;
-}#page14 {
+}#page14 {background-image: url(Rectangle\ 2.png);
 	z-index: 1;
+	font-size: 20px;
+}
+#page14 a {
+	font-size: 20px;
 }
 
-#checkbox-cover:checked ~ .book {
+#checkbox-cover:checked ~ .book {  	
 	transform: translateX(200px);
+	background-color: antiquewhite;
+
+	
 
 }
-#checkbox-cover:checked ~ .book .cover {
+#checkbox-cover:checked ~ .book .cover  {
 	transition: transform 1.5s, z-index 0.5s 0.5s;
 	transform: rotateY(-180deg);
 	z-index: 1;
+	
+
 }
 #checkbox-cover:checked ~ .book .page {	transition: transform 1.5s, z-index 0.5s 0.5s;
 	box-shadow: 0 0 3px rgb(99, 98, 98);
 }
 #checkbox-page1:checked ~ .book #page1 {
-	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transition: transform 1.2s, z-index 0.2s 0.2s;
 	transform: rotateY(-180deg);
 	z-index: 2;box-shadow: 0 0 5px rgb(41, 41, 41);
 }
-#checkbox-page2:checked ~ .book #page2 {
-	transform: rotateY(-180deg);box-shadow: 0 0 5px rgb(41, 41, 41);
+#checkbox-page2:checked ~ .book #page2 {	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transform: rotateY(-180deg);
 	z-index: 3;
 }
 #checkbox-page3:checked ~ .book #page3 {
@@ -389,3 +536,4 @@ text-align: center;
 	box-shadow: 0 0 5px rgb(41, 41, 41);
 	background-color: rgba(222, 173, 59, 0.761);
 }
+
